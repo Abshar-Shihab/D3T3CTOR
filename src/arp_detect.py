@@ -27,7 +27,7 @@ def process_packet(packet):
  .8'     `888.        888       o       888       o       888  `88b.            888           .o. .o. .o. 
 o88o     o8888o      o888ooooood8      o888ooooood8      o888o  o888o          o888o          Y8P Y8P Y8P 
                                                                                                                                         
-                """)
+                \033[0;0m""")
 
                 print(f"IP {ip} was previously associated with mac {arp_table[ip]}, now seen as\033[0;91m {mac}\033[0;0m")
         else:
