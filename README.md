@@ -7,7 +7,7 @@ D3T3CTOR is a cybersecurity framework designed to detect and analyze various net
 
 ---
 <h1 align="center">D3T3CTOR Framework</h1>
-![image](banner.png)
+<img src="banner.png" alt="Image"/>
 
 
 ## Features  
