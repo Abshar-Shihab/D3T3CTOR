@@ -33,7 +33,7 @@ To install and run D3T3CTOR, follow these steps:
 
 2. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/D3T3CTOR.git
+   git clone https://github.com/Abshar-Shihab/D3T3CTOR.git
    ```
 
 3. Navigate to the D3T3CTOR directory:
