@@ -25,7 +25,11 @@ def logo(): #Used asci art font - ANSI Shadow
 
 
 def main_menu():
-    print("\033[1;92m[1] ARP Spoofing Detection\033[0;0m")
+    print("\033[1;92m[1] Man-in-the-Middle (MitM) Attacks\033[0;0m")
+    print("\033[1;92m[2] Network Attacks\033[0;0m")
+    print("\033[1;92m[3] Network Spoofing Attacks\033[0;0m")
+    print("\033[1;92m[4] Denial-of-Service (DoS) & Flooding Attacks\033[0;0m")
+    print("\033[1;92m[5] Exploitation Attacks\033[0;0m")
     print("\033[1;92m[0] Exit\033[0;0m")
 
     while True:
@@ -38,12 +42,39 @@ def main_menu():
             print("\033[1;37mInvalid option! Try again.\033[0;0m")
 
     if choice == 1:
-        #print("\033[1;93mRunning ARP Spoofing Detection...\033[0;0m")
-        run_arp_detection()
+            run_mitm_attacks()
     elif choice == 0:
         print("\n\033[1;91mExiting...\033[0;0m")
         exit(0)
 
+def run_mitm_attacks():
+    print("\n\t\t\033[1;103;97m    Man-in-the-Middle (MitM) Attacks    \033[0;0m\n")
+    print("\033[1;92m[1] ARP Spoofing Detection\033[0;0m")
+    print("\033[1;92m[2] Rough Access Point Detection\033[0;0m")
+    print("\033[1;92m[3] Back\033[0;0m")
+    print("\033[1;92m[0] Exit\033[0;0m")
+
+    while True:
+        try:
+            choice = int(input("\nOPTION: "))
+            if 0 > choice > 3:
+                print("\033[1;37mInvalid option! Try again.\033[0;0m")
+            break
+        except ValueError:
+            print("\033[1;37mInvalid option! Try again.\033[0;0m")
+
+    if choice == 1:
+        run_arp_detection()
+    elif choice == 2:
+        os.system("python3 src/roughAP_detection.py")
+        input("Press Enter to Continue....")
+        os.system("clear")
+        run_mitm_attacks()
+    elif choice == 3:
+        main_menu()
+    else:
+        print("\n\033[1;91mExiting...\033[0;0m")
+        exit(0)
 
 def run_arp_detection():
     #os.system("clear")
@@ -74,6 +105,7 @@ def run_arp_detection():
             time.sleep(0.2)
         print("")
         os.system("python3 src/arp_detect.py")
+        input("Press Enter to Continue....")
         os.system("clear")
         run_arp_detection()
 
