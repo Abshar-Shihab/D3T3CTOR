@@ -18,7 +18,7 @@ D3T3CTOR is a cybersecurity framework designed to detect and analyze various net
 ✔️ Identifies DNS spoofing attacks  
 ✔️ Monitors and detects deauthentication attacks  
 ✔️ Lightweight and efficient  
-✔️ Compatible with all **Linux** distributions  
+✔️ Compatible with **Kali Linux** distributions  
 
 ---
 
