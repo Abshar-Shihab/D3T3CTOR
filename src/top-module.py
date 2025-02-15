@@ -71,6 +71,7 @@ def run_mitm_attacks():
         os.system("clear")
         run_mitm_attacks()
     elif choice == 3:
+        logo()
         main_menu()
     else:
         print("\n\033[1;91mExiting...\033[0;0m")
@@ -110,8 +111,7 @@ def run_arp_detection():
         run_arp_detection()
 
     elif choice == 3:
-        logo()
-        main_menu()
+        run_mitm_attacks()
 
     elif choice == 0:
         print("\n\033[1;91mExiting...\033[0;0m")
