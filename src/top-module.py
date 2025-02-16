@@ -26,7 +26,7 @@ def logo(): #Used asci art font - ANSI Shadow
 
 def main_menu():
     print("\033[1;92m[1] Man-in-the-Middle (MitM) Attacks\033[0;0m")
-    print("\033[1;92m[2] Network Attacks\033[0;0m")
+    print("\033[1;92m[2] Wireless Network Attacks\033[0;0m")
     print("\033[1;92m[3] Network Spoofing Attacks\033[0;0m")
     print("\033[1;92m[4] Denial-of-Service (DoS) & Flooding Attacks\033[0;0m")
     print("\033[1;92m[5] Exploitation Attacks\033[0;0m")
@@ -77,6 +77,36 @@ def run_mitm_attacks():
         print("\n\033[1;91mExiting...\033[0;0m")
         exit(0)
 
+def run_wireless_network_attacks():
+    print("\n\t\t\033[1;103;97m    Wireless Network Attacks    \033[0;0m\n")
+    print("\033[1;92m[1] Deauthentication Attack Detection\033[0;0m")
+    print("\033[1;92m[2] Evil Twin Attack Detection\033[0;0m")
+    print("\033[1;92m[3] Beacon Flooding Detection\033[0;0m")
+    print("\033[1;92m[4] Back\033[0;0m")
+    print("\033[1;92m[0] Exit\033[0;0m")
+
+def run_network_spoofing_attacks():
+    print("\n\t\t\033[1;103;97m    Network Spoofing Attacks    \033[0;0m\n")
+    print("\033[1;92m[1] MAC Spoofing Detection\033[0;0m")
+    print("\033[1;92m[2] IP Spoofing Detection\033[0;0m")
+    print("\033[1;92m[3] DHCP Spoofing Detection\033[0;0m")
+    print("\033[1;92m[4] Back\033[0;0m")
+    print("\033[1;92m[0] Exit\033[0;0m")
+
+def run_dos_flooding_attacks():
+    print("\n\t\t\033[1;103;97m    DoS & Flooding Attacks    \033[0;0m\n")
+    print("\033[1;92m[1] Ping Flood Detection\033[0;0m")
+    print("\033[1;92m[2] Syn Flood Detection\033[0;0m")
+    print("\033[1;92m[3] Back\033[0;0m")
+    print("\033[1;92m[0] Exit\033[0;0m")
+
+def run_exploitation_attacks():
+    print("\n\t\t\033[1;103;97m    Exploitation Attacks    \033[0;0m\n")
+    print("\033[1;92m[1] Port Scanning Detection\033[0;0m")
+    print("\033[1;92m[2] Brute Force Attack Detection\033[0;0m")
+    print("\033[1;92m[3] Back\033[0;0m")
+    print("\033[1;92m[0] Exit\033[0;0m")
+
 def run_arp_detection():
     #os.system("clear")
     print("\n\t\t\033[1;103;97m    ARP SPOOFING DETECTION    \033[0;0m\n")
@@ -116,7 +146,6 @@ def run_arp_detection():
     elif choice == 0:
         print("\n\033[1;91mExiting...\033[0;0m")
         exit(0)
-
 
 # setting up the signal handler to exit (Ctrl+C)
 signal.signal(signal.SIGINT, lambda sig, frame: (print("\n\033[1;91mExiting...\033[0;0m"), exit(0)))
